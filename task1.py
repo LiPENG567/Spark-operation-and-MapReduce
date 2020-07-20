@@ -15,7 +15,6 @@ path_stop = sys.argv[3]
 y = sys.argv[4]
 m = sys.argv[5]
 n = sys.argv[6]
-# review = sc.textFile('/Users/zailipeng/Desktop/my_research/Important_information/books/CS/Inf553/HW1/review.json')
 review = sc.textFile(path)
 Myrdd = review.map(json.loads).map(lambda row: (row['date'],row['user_id'],row['text'])).persist()
 
@@ -73,25 +72,7 @@ with open(filename,'w') as outfile:
     json.dump(data, outfile)
 
 
-# In[ ]:
 
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
 
 
 
